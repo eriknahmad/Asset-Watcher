@@ -20,3 +20,8 @@ Contributions, issues and feature requests are welcome.
 Erik Nahmad
 - Discord: Myth#0548
 - Email: eriknahmad@gmail.com
+
+
+# License
+Copyright © 2022 [Erik Nahmad](https://github.com/eriknahmad).<br />
+This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
