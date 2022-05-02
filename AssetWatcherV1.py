@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 # Project Name: Asset Watcher
 # File Name: AssetWatcherV1.py
 # Author: Erik Nahmad
