@@ -8,7 +8,7 @@ I wrote this program as a proof of concept. The idea is to make a chat bot that 
 
 # How to use?
 Use a notepad or IDE to:
-- Adjust coin and threshold parameters in the first two lists.
+- Adjust coin and threshold parameters at the beginning of the script.
 - Run the script.
 
 
@@ -24,4 +24,4 @@ Erik Nahmad
 
 # License
 Copyright © 2022 [Erik Nahmad](https://github.com/eriknahmad).<br />
-This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/eriknahmad/Asset-Watcher/blob/main/LICENSE) licensed.
