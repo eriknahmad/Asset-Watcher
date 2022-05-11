@@ -3,12 +3,14 @@ Cryptocurrency price watcher
 
 
 # Motivation
-I wrote this program as a proof of concept. The idea is to make a chat bot that will alert me when my assets are low or high. I will add commands that will allow me to change the watch list and thresholds without touching the code. The bot will run 24/7 and use a database to backup the data, in case of downtime.
+I wrote this program to notify me if the price of an asset exceeds a specified thresholds. This chat bot is equipped with commands to dynamically update the watch list and thresholds. The bot runs 24/7 and uses a database to backup the data, in case of downtime.
 
 
 # How to use?
-Use a notepad or IDE to:
-- Adjust coin and threshold parameters at the beginning of the script.
+Use Discord Developer Portal to create a bot, copy the API Key, and use a notepad or IDE to:
+- Insert Discord API Key into script
+- Copy your servers unique ID, server owners ID, and a spam channel ID.
+- Replace Server, Owner, and Spam_Channel Variables with each ID.
 - Run the script.
 
 
