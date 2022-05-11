@@ -59,18 +59,19 @@ async def clear(cmd, amount=20):
 # Alert user if the price of the asset reaches 50 or 150.
 @bot.command(name="watch", brief="Watch An Asset", aliases=["w"])
 async def watch(cmd, Coin=None, Threshold=10):
-  if Coin and Threshold != None:
-    CoinList.append(Coin.upper())
-    Thresholds.append(Threshold)
-    i = -1  # Last Index
+  Status = requests.get(Request.format(Coin)).status_code  # Response Code
+  if Coin != None and Status != 404:  # if valid code is sent
+    CoinList.append(Coin.upper())  # append coin to list
+    Thresholds.append(Threshold)  # append threshold to list
+    i = -1  # Index position for last element
     CoinData(i)  # Update data for newly added coin
-    PriceList.append(C_PRICES[i])  # Watch Point
+    PriceList.append(C_PRICES[i])  # Coin price
     DatabaseStore()  # Store Coin Name, Price, and Threshold
     CurrentPrice = f"```{Push_List[i]}\n"
     Threshold = f"Threshold: {Thresholds[i]}%```"
     Price_List = CurrentPrice + Threshold
     await cmd.send(Price_List)
-  else:
+  elif Coin == None or Status == 404:  # No Coin or Invalid Coin
     await cmd.send("That asset is not in my database.")
 
 
@@ -115,18 +116,20 @@ async def price(cmd, Index=None):
 async def delete(cmd, Index=None, Threshold=None):
   i = int(Index)
   
-  if Threshold == None:  # Only an Index is returned
-    await cmd.channel.send(f"```Deleting {CoinList[i]}```")
+  if Threshold == None and i < len(CoinList):  # if valid index is sent
+    await cmd.channel.send(f"```Deleting {CoinList[i]}```")  # Delete message
     DatabaseDel(i)  # Remove item by Index then update database
     ReloadData()   # Reload data
+    DatabaseStore()  # Store New Data
 
-  elif Threshold != None:  # Change Threshold
-    try:
-      Thresholds[i] = int(Threshold)  # Set the list value equal to parameter
-      NewThreshold = f"```{CoinList[i]} Threshold: {Thresholds[i]}%```"
-      await cmd.channel.send(NewThreshold)  # Display new threshold
-    except:
-      pass
+  elif Threshold != None and i < len(CoinList):  # Change Threshold
+    Thresholds[i] = int(Threshold)  # Set the list value equal to parameter
+    NewThreshold = f"```{CoinList[i]} Threshold: {Thresholds[i]}%```"
+    await cmd.channel.send(NewThreshold)  # Display new threshold
+    DatabaseStore()  # Store New Data
+
+  else:
+    await cmd.channel.send(f"```No Value at Index {Index}```")
     
 
 
