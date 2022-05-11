@@ -13,7 +13,7 @@ Use Discord Developer Portal to create a bot, copy the API Key, and use [Replit]
 - Replace Server, Owner, and Spam_Channel Variables with each ID.
 - Run the script and use /help for commands.
 
-For now you need to use Replit until I integrate a database like MongoDB. Use Replit's Keep Alive Script and copy the flask website url it generates. Use [UptimeRobot](https://www.uptimerobot.com) or something similar to ping the flask website to keep it up 24/7.
+For now Replit is necessary until I integrate a database like MongoDB. Use Replit's Keep Alive script to create a basic website and copy the url. Use [UptimeRobot](https://www.uptimerobot.com) or something similar to ping the flask website you created. This will keep the website and bot running 24/7.
 
 
 # Contribute
