@@ -7,11 +7,13 @@ I wrote this program to notify me if the price of an asset exceeds a specified t
 
 
 # How to use?
-Use Discord Developer Portal to create a bot, copy the API Key, and use a notepad or IDE to:
+Use Discord Developer Portal to create a bot, copy the API Key, and use [Replit](https://www.replit.com) IDE to:
 - Insert Discord API Key into script.
 - Copy your servers unique ID, server owners ID, and a spam channel ID.
 - Replace Server, Owner, and Spam_Channel Variables with each ID.
 - Run the script and use /help for commands.
+
+For now you need to use Replit until I integrate a database like MongoDB. Use Replit's Keep Alive Script and copy the flask website url it generates. Use [UptimeRobot](https://www.uptimerobot.com) or something similar to ping the flask website to keep it up 24/7.
 
 
 # Contribute
