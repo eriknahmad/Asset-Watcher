@@ -8,10 +8,10 @@ I wrote this program to notify me if the price of an asset exceeds a specified t
 
 # How to use?
 Use Discord Developer Portal to create a bot, copy the API Key, and use a notepad or IDE to:
-- Insert Discord API Key into script
+- Insert Discord API Key into script.
 - Copy your servers unique ID, server owners ID, and a spam channel ID.
 - Replace Server, Owner, and Spam_Channel Variables with each ID.
-- Run the script.
+- Run the script and use /help for commands.
 
 
 # Contribute
